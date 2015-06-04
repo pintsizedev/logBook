@@ -11,6 +11,4 @@ $data = array("title" => $_POST['title'], "body" => $_POST['body']);
 
 $DBManager->addPost($data);
 
-$Messages->addMessage('s', "Test Message");
-
 $Messages->addMessage('s', "Post was added successfully!", 'index.php');

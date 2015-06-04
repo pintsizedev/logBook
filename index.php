@@ -19,8 +19,9 @@ $Messages  = new Messages();
 <div class="container">
     <!-- Check for post successes/failures -->
     <?php
-        //TODO: Proper message checking
-        $Messages->display("s");
+        if($Messages->hasMessage()) {
+            $Messages->display();
+        }
     ?>
     <!-- End success/failure checks -->
 
@@ -47,11 +48,5 @@ $Messages  = new Messages();
         </ul>
     </div>
 </div>
-
-<div>
-    $_SESSION:
-    <?php var_dump($_SESSION); ?>
-</div>
-
 </body>
 </html>
