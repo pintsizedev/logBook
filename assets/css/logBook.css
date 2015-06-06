@@ -1,0 +1,65 @@
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d9d6cf;
+}
+
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+/*
+ * ==============
+ * =    Form    =
+ * ==============
+ */
+
+#createPost {
+    padding: 0 10%;
+    margin: 0 auto;
+}
+
+.formLabel {
+    margin: 0 5px auto auto;
+
+}
+
+input#postTitle {
+    margin: 0 auto 10px auto;
+    width: 100%;
+}
+
+textarea#postBody {
+    resize: none;
+    height: 20em;
+    margin: 0 auto 10px auto;
+    width: 100%;
+}
+
+#postSubmit {
+
+}
+
+/*
+ * ==============
+ * =    Post    =
+ * ==============
+ */
+
+.postTitle {
+    font-size: 24px;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+.postBody {
+    font-size: 18px;
+    margin-left: 16px;
+    word-wrap: break-word;
+}

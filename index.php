@@ -1,6 +1,8 @@
 <html>
 <head>
-
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/logBook.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/messages.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <?php
@@ -25,13 +27,21 @@ $Messages  = new Messages();
     ?>
     <!-- End success/failure checks -->
 
-    <div class="createPost">
+    <div id="createPost">
         <form action="createPost.php" method="post">
-            <input type="text" name="title" />
-            <input type="text" name="body" />
-            <input type="submit" />
+            <p class="formLabel">Title</p>
+            <label>
+                <input type="text" id="postTitle" name="title"/>
+            </label>
+            <p class="formLabel">Body</p>
+            <label>
+                <textarea id="postBody" name="body"></textarea>
+            </label>
+            <br>
+            <input id="postSubmit" type="submit" />
         </form>
     </div>
+
     <div class="displayPosts">
         <ul>
             <?php
@@ -39,9 +49,8 @@ $Messages  = new Messages();
                 $cursor->sort(array('_id' => -1));
                 foreach($cursor as $post) {
                     echo "<div class='post'>";
-                        echo "<li>" . $post['title'];
-                        echo "<ul> <li>" . $post['body'] . "</li> </ul>";
-                        echo "</li>";
+                        echo "<p class='postTitle'>" . $post['title'] . "</p>";
+                        echo "<p class='postBody'>" . $post['body'] . "</p>";
                     echo "</div>";
                 }
             ?>

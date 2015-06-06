@@ -9,10 +9,10 @@
  * Messages can be displayed by type, or can all be displayed at once.
  *
  * Message types are:
- *      h - help
- *      i - info
- *      w - warning
- *      e - error
+ *      h - help,
+ *      i - info,
+ *      w - warning,
+ *      e - error,
  *      s - success
  */
 
@@ -32,7 +32,7 @@ class Messages {
 
         if(!array_key_exists('flash_messages', $_SESSION)) $_SESSION['flash_messages'] = array();
 
-        $this->messageBefore = "<div class=%s>";
+        $this->messageBefore = "<div class='flashMessage %s'>";
         $this->messageAfter = "</div>";
     }
 

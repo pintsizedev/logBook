@@ -1,0 +1,18 @@
+.flashMessage {
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.help, .info, .warning {
+    background: #f3ea58;
+}
+
+.error {
+    background: #f33d32;
+}
+
+.success {
+    background: #57F365;
+}
