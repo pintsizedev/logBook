@@ -17,7 +17,7 @@
  */
 
 class Messages {
-
+    
     //TODO: Proper message wrapping
     private $messageBefore;
     private $messageAfter;

@@ -9,6 +9,7 @@
 spl_autoload_register(function($class) {
     include $class . '.php';
 });
+
 if(!isset($_SESSION)) {
     session_start();
 }
