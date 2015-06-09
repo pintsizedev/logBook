@@ -28,7 +28,7 @@ $Messages  = new Messages();
     <!-- End success/failure checks -->
 
     <div id="createPost">
-        <form action="createPost.php" method="post">
+        <form action="createPost.php" method="post" accept-charset="UTF-8">
             <p class="formLabel">Title</p>
             <label>
                 <input type="text" id="postTitle" name="title"/>
@@ -49,8 +49,11 @@ $Messages  = new Messages();
                 $cursor->sort(array('_id' => -1));
                 foreach($cursor as $post) {
                     echo "<div class='post'>";
-                        echo "<p class='postTitle'>" . $post['title'] . "</p>";
-                        echo "<p class='postBody'>" . $post['body'] . "</p>";
+                        echo "<div class='postHeader'>";
+                            echo "<p class='postDate'>" . $post['posted'] . "</p>";
+                            echo "<p class='postTitle'>" . htmlspecialchars($post['title']) . "</p>";
+                        echo "</div>";
+                        echo "<p class='postBody'>" . nl2br(htmlspecialchars($post['body'])) . "</p>";
                     echo "</div>";
                 }
             ?>

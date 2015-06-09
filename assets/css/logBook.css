@@ -52,10 +52,29 @@ textarea#postBody {
  * ==============
  */
 
+.post {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.postHeader {
+    margin-bottom: 10px;
+}
+
 .postTitle {
+    display: inline-block;
     font-size: 24px;
     text-decoration: underline;
-    margin: 10px 0;
+    width: auto;
+}
+
+.postDate {
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    color: darkgrey;
 }
 
 .postBody {

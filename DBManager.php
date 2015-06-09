@@ -9,7 +9,7 @@ class DBManager {
     }
 
     function addPost(array $data) {
-        $collection = $this->connection->logBook->posts;
+        $collection = $this->db->posts;
         $collection->insert($data);
     }
 
